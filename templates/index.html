@@ -5,12 +5,11 @@
     <title>My Website</title>
 </head>
 <body>
-    <h1>Hello World </h1>
-    <h2> {{5*6}}</h2>
-    <h3>Random Number: {{num}}</h3>
+    {%for blog_post in post: %}
+        <h1>{{blog_post.title}}</h1>
+        <h2>{{blog_post["subtitle"]}}</h2>
+        <h3>{{blog_post.body}}</h3>
+    {%endfor%}
 </body>
-<footer>
-    <p> Copyright {{year}} by Sudharson</p>
 
-</footer>
 </html>
